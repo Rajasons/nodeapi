@@ -23,7 +23,8 @@ app.use("/api/cart",CartRoute);
 
 mongoose.connect("mongodb+srv://rajsonsit:OPInynsinxsj9ePC@backend.f0fz4.mongodb.net/?retryWrites=true&w=majority&appName=backend").then(()=>{
     console.log("connected");
-    server.listen(3000,()=>{
+    const PORT = process.env.PORT || 3000;
+    server.listen(PORT,()=>{
         console.log("server run on port 3000");
     });
 }).catch((err)=>{
